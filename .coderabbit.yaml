@@ -1,0 +1,45 @@
+version: 1
+
+# Which language or framework guidelines to apply
+style_guide: "google"   # Options: google, airbnb, pep8, custom
+
+# Review Scope
+review:
+  # Whether to review for coding standards
+  code_style: true
+  # Whether to review for potential security issues
+  security: true
+  # Whether to review for performance optimization
+  performance: true
+  # Whether to review for readability and maintainability
+  readability: true
+  # Whether to review for documentation and comments
+  documentation: true
+
+# AI Behavior
+ai:
+  verbosity: "medium"      # Options: low, medium, high
+  tone: "constructive"     # Options: strict, friendly, neutral
+  max_comments: 50         # Limit total comments per PR
+  suggest_fixes: true      # Provide fix suggestions
+  summarize_pr: true       # Include PR summary comment
+
+# File ignore patterns
+ignore:
+  - "**/*.md"
+  - "**/dist/**"
+  - "**/node_modules/**"
+
+# Security and Compliance
+security:
+  secrets_scan: true
+  dependency_check: true
+
+# Continuous Learning
+learning:
+  # If true, CodeRabbit adapts based on accepted/rejected suggestions
+  adapt: true
+
+include:
+  - "**/*.js"
+  - "**/*.ts"
